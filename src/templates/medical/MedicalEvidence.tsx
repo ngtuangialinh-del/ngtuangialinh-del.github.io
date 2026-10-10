@@ -109,8 +109,10 @@ export function MedicalEvidence() {
                       bg="rgba(3,15,14,.84)"
                       fontWeight={700}
                     >
-                      <LuEye /> Review {document.pageCount}{" "}
-                      {document.pageCount === 1 ? "page" : "pages"}
+                      <LuEye />{" "}
+                      {document.previewScope === "selected-pages"
+                        ? "Preview selected pages"
+                        : `Review ${document.pageCount} ${document.pageCount === 1 ? "page" : "pages"}`}
                     </Flex>
                   </Flex>
                 </Button>

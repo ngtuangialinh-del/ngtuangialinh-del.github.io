@@ -125,7 +125,7 @@ export function MedicalCommunityCare() {
                   >
                     <LuUsers size={17} />
                     <Text fontSize="sm" fontWeight={600}>
-                      Collective contribution with classmates and organizers
+                      With my classmates and the organizers
                     </Text>
                   </Flex>
                 ) : null}

@@ -76,26 +76,26 @@ export const journeyMilestones = [
     id: "school",
     label: "Nguyễn Siêu School",
     description:
-      "Completed secondary education at Nguyễn Siêu School, Hanoi, building a foundation in science and English across Grades 10 through 12.",
+      "I studied at Nguyễn Siêu School in Hanoi, where I focused on science and English during Grades 10–12.",
     period: "2023–2026",
   },
   {
     id: "strengths",
     label: "Strength in Science and English",
     description:
-      "Sustained strong results in Mathematics, the sciences, and English, culminating in Cambridge IGCSE and IELTS Academic results.",
+      "Mathematics, science, and English were my strongest subjects. I also took Cambridge IGCSE exams and IELTS Academic.",
   },
   {
     id: "service",
-    label: "Sustained Service Activities",
+    label: "Volunteering with Classmates",
     description:
-      "Took part in community-care initiatives throughout secondary school, alongside academic preparation.",
+      "During secondary school, I joined my classmates in volunteer projects supporting children and families.",
   },
   {
     id: "admission",
     label: "Medicine Program Admission",
     description:
-      "Admitted to the Medicine program at the University of Medicine and Pharmacy, Thai Nguyen University, based on upper-secondary academic results.",
+      "I was admitted to the Medicine program at the University of Medicine and Pharmacy, Thai Nguyen University, based on my school results.",
     period: "2026",
   },
 ] satisfies JourneyMilestone[];

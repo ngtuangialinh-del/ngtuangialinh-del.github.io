@@ -5,7 +5,7 @@ export const identity = {
   statusStatement:
     "Incoming medical student, admitted to the Medicine program at the University of Medicine and Pharmacy, Thai Nguyen University.",
   valueStatement:
-    "I am preparing to study medicine after years of steady academic work and sustained community service — a path built on evidence, not proclamation.",
+    "Hi, I’m Linh, a Nguyễn Siêu School graduate excited to study medicine. Take a look around to explore my schoolwork, our Cordyceps research project, and volunteering with my classmates.",
   profileImage: {
     src: "/profile/gia-linh-profile.jpg",
     alt: "Portrait of Nguyễn Tuấn Gia Linh in Nguyễn Siêu School uniform",

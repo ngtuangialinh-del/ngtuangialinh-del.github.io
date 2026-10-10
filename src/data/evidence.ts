@@ -1,19 +1,60 @@
 import hematologyAcknowledgementUrl from "../assets/documents/hematology-volunteering-acknowledgement.pdf";
 import cvUrl from "../assets/documents/nguyen-tuan-gia-linh-cv.pdf";
 import researchAwardCertificateUrl from "../assets/documents/research-gold-medal-certificate.pdf";
+import innoverseCatalogUrl from "../assets/documents/innoverse-2026-catalog.pdf";
 import type { EvidenceDocument } from "../types/medical";
 
-export const evidenceDocuments = (
+const documents = (
   [
     {
+      id: "innoverse-catalog",
+      significanceRank: 2,
+      title: "Innoverse 2026 official project catalog",
+      category: "Research publication",
+      summary:
+        "Our four-person team’s Cordyceps militaris project is listed as VN.4 in the official Idea & Invention project booklet.",
+      sourceNote:
+        "Find our entry on printed page 73 (PDF page 77). Preview the cover and project page, or download the full 79-page catalog.",
+      availability: "preview-and-download",
+      sourceType: "Official project booklet",
+      publicationState: "public-sanitized-evidence",
+      provenance:
+        "Owner-supplied Innoverse 2026 catalog; VN.4 title and all four inventors visually cross-checked on PDF page 77.",
+      redactionNote:
+        "The catalog title says Cordyceps militaris, but its abstract says Ganoderma lucidum. The source wording is preserved here; the project description follows the matching title and research records.",
+      pageCount: 79,
+      previewScope: "selected-pages",
+      pages: [
+        {
+          id: "innoverse-catalog-cover",
+          pdfPageNumber: 1,
+          label: "Cover",
+          imageUrl: "/documents/pages/innoverse-catalog-cover.webp",
+          alt: "Cover of the Innoverse 2026 official Idea & Invention project booklet",
+        },
+        {
+          id: "innoverse-catalog-project",
+          pdfPageNumber: 77,
+          label: "VN.4 · printed page 73",
+          imageUrl: "/documents/pages/innoverse-catalog-project.webp",
+          alt: "Printed page 73 of the Innoverse 2026 catalog listing Nguyen Tuan Gia Linh and the four-person Cordyceps militaris project team as VN.4",
+        },
+      ],
+      downloadPolicy: "download",
+      assetUrl: innoverseCatalogUrl,
+      downloadName: "innoverse-2026-catalog.pdf",
+      thumbnailUrl: "/documents/pages/innoverse-catalog-cover.webp",
+      thumbnailAlt: "Cover of the Innoverse 2026 official project catalog",
+    },
+    {
       id: "curriculum-vitae",
-      significanceRank: 6,
+      significanceRank: 7,
       title: "Curriculum Vitae",
       category: "Profile",
       summary:
         "Two-page overview of education, research, service, and extracurricular experience.",
       sourceNote:
-        "Public copy reviewed for contact and identity information. Its IELTS 7.5 entry now aligns with the latest official report.",
+        "My CV covers my education, research, volunteering, and other activities.",
       availability: "preview-and-download",
       sourceType: "Owner-supplied curriculum vitae",
       publicationState: "public-sanitized-evidence",
@@ -26,32 +67,32 @@ export const evidenceDocuments = (
         {
           id: "cv-page-1",
           label: "Page 1",
-          imageUrl: "/documents/pages/cv-01.jpg",
+          imageUrl: "/documents/pages/cv-01.webp",
           alt: "Page 1 of Nguyễn Tuấn Gia Linh's curriculum vitae",
         },
         {
           id: "cv-page-2",
           label: "Page 2",
-          imageUrl: "/documents/pages/cv-02.jpg",
+          imageUrl: "/documents/pages/cv-02.webp",
           alt: "Page 2 of Nguyễn Tuấn Gia Linh's curriculum vitae",
         },
       ],
       downloadPolicy: "download",
       assetUrl: cvUrl,
       downloadName: "nguyen-tuan-gia-linh-cv.pdf",
-      thumbnailUrl: "/documents/pages/cv-01.jpg",
+      thumbnailUrl: "/documents/pages/cv-01.webp",
       thumbnailAlt:
         "First page preview of Nguyễn Tuấn Gia Linh's curriculum vitae",
     },
     {
       id: "hematology-acknowledgement",
-      significanceRank: 8,
+      significanceRank: 9,
       title: "Hematology volunteering acknowledgement",
       category: "Community service",
       summary:
         "Acknowledgement of the 30 July 2026 pediatric gift-giving activity.",
       sourceNote:
-        "Rasterized public-safe copy with the source document's external link removed.",
+        "A letter acknowledging our group’s visit and gifts to children receiving treatment.",
       availability: "preview-and-download",
       sourceType: "Institutional acknowledgement",
       publicationState: "public-sanitized-evidence",
@@ -77,20 +118,20 @@ export const evidenceDocuments = (
     },
     {
       id: "school-record",
-      significanceRank: 5,
+      significanceRank: 6,
       title: "Upper-secondary academic record",
       category: "Academic record",
       summary:
         "Verified Grade 10–12 GPA, recognition, and subject-result highlights.",
       sourceNote:
-        "Verified summary: the private eight-page source includes a portrait and personal record details.",
+        "A summary of my school results. The original record is kept private because it includes personal details.",
       availability: "preview-only",
       sourceType: "Private school record",
       publicationState: "verified-summary",
       provenance:
         "Values cross-checked against the supplied Grade 10–12 record.",
       redactionNote:
-        "Designed summary used instead of redacting the original portrait and identifiers.",
+        "This summary shares my results without my photo or personal identifiers.",
       pageCount: 2,
       pages: [
         {
@@ -112,20 +153,19 @@ export const evidenceDocuments = (
     },
     {
       id: "igcse-statement",
-      significanceRank: 4,
+      significanceRank: 5,
       title: "Cambridge IGCSE statement",
       category: "Qualification",
       summary:
         "Verified five subject grades and percentage uniform marks from June 2024.",
       sourceNote:
-        "Verified summary: the private original contains birth and candidate identifiers.",
+        "My grades and marks from the June 2024 exams, with personal details kept private.",
       availability: "preview-only",
       sourceType: "Private official result statement",
       publicationState: "verified-summary",
       provenance:
         "Grades and percentage uniform marks cross-checked against the supplied statement.",
-      redactionNote:
-        "Designed summary used instead of publishing candidate and birth identifiers.",
+      redactionNote: "My date of birth and candidate details are kept private.",
       pageCount: 1,
       pages: [
         {
@@ -141,20 +181,19 @@ export const evidenceDocuments = (
     },
     {
       id: "ielts-result",
-      significanceRank: 3,
+      significanceRank: 4,
       title: "IELTS Academic result",
       category: "Qualification",
       summary:
         "Official overall band 7.5 with Listening 8.5, Reading 8.0, Writing 7.0, Speaking 6.5, and CEFR C1.",
       sourceNote:
-        "Official result is authoritative; the private original contains a portrait and candidate identifiers.",
+        "These scores are from my official IELTS report. My photo and candidate details are kept private.",
       availability: "preview-only",
       sourceType: "Private official IELTS report",
       publicationState: "verified-summary",
       provenance:
         "Scores cross-checked against the owner-supplied official result document dated 14 August 2026.",
-      redactionNote:
-        "Designed summary used instead of publishing the official portrait and identifiers.",
+      redactionNote: "My photo and candidate details are kept private.",
       pageCount: 1,
       pages: [
         {
@@ -175,15 +214,14 @@ export const evidenceDocuments = (
       category: "Research recognition",
       summary:
         "Gold Medal awarded to the four-person project team for the nanoformulated Cordyceps militaris research project at the Innoverse Invention & Innovation Expo.",
-      sourceNote:
-        "Public certificate dated 24 August 2026; the team attribution and project title are preserved.",
+      sourceNote: "Our team’s certificate, dated 24 August 2026.",
       availability: "preview-and-download",
       sourceType: "Research award certificate",
       publicationState: "public-sanitized-evidence",
       provenance:
         "Owner-supplied one-page certificate reviewed visually against the existing research project title.",
       redactionNote:
-        "Flattened public copy removes source-file metadata while preserving the award, team names, signatures, and public verification mark.",
+        "This copy shows the award, our team names, and the certificate’s verification mark.",
       pageCount: 1,
       pages: [
         {
@@ -201,20 +239,20 @@ export const evidenceDocuments = (
     },
     {
       id: "admission-and-graduation",
-      significanceRank: 2,
+      significanceRank: 3,
       title: "Admission and graduation records",
       category: "Milestones",
       summary:
         "Verified 2026 upper-secondary completion and Medicine program admission with a score of 27.20.",
       sourceNote:
-        "Verified summaries: the private originals contain birth, identity, enrolment, financial, QR, and register details.",
+        "Summaries of my graduation and admission records, with personal details kept private.",
       availability: "preview-only",
       sourceType: "Private diploma and admission notice",
       publicationState: "verified-summary",
       provenance:
         "Milestones cross-checked against the supplied diploma and admission notice.",
       redactionNote:
-        "Designed summaries used because safe redaction would leave misleading fragments.",
+        "These summaries share the key milestones while keeping personal details private.",
       pageCount: 2,
       pages: [
         {
@@ -236,20 +274,20 @@ export const evidenceDocuments = (
     },
     {
       id: "community-project-records",
-      significanceRank: 7,
+      significanceRank: 8,
       title: "Community project records",
       category: "Community service",
       summary:
         "Verified collective outcomes from the multi-year school project and 2025 Lunar New Year support program.",
       sourceNote:
-        "Verified summaries: private documents and screenshots contain contact, financial, donor, or third-party details.",
+        "Summaries of the projects I joined. Contact information and other people’s personal details are kept private.",
       availability: "preview-only",
       sourceType: "Private DOCX records and documentary screenshots",
       publicationState: "verified-summary",
       provenance:
         "Facts cross-checked against both project documents, supporting screenshots, and the formal thank-you record.",
       redactionNote:
-        "Designed summaries exclude bank, contact, donor, and unnecessary third-party details.",
+        "Bank details, contact information, and donor details are kept private.",
       pageCount: 3,
       pages: [
         {
@@ -278,7 +316,7 @@ export const evidenceDocuments = (
   ] satisfies EvidenceDocument[]
 ).sort((first, second) => first.significanceRank - second.significanceRank);
 
-const curriculumVitaeDocument = evidenceDocuments.find(
+const curriculumVitaeDocument = documents.find(
   (document) => document.id === "curriculum-vitae",
 );
 
@@ -287,3 +325,18 @@ if (!curriculumVitaeDocument) {
 }
 
 export const cvDocument = curriculumVitaeDocument;
+
+const catalogDocument = documents.find(
+  (document) => document.id === "innoverse-catalog",
+);
+
+if (!catalogDocument) {
+  throw new Error("Innoverse catalog document is required");
+}
+
+export const researchCatalogDocument = catalogDocument;
+
+// The CV is available in the introduction; the library contains supporting records.
+export const evidenceDocuments = documents.filter(
+  (document) => document.id !== "curriculum-vitae",
+);

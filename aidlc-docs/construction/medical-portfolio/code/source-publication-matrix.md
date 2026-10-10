@@ -76,4 +76,13 @@ This matrix covers all 30 substantive files in `src/assets/CV/`. Source contents
 - Every relevant source group has a public representation through ten approved photographs, sanitized evidence, or a verified summary.
 - Both MP4 files remain private.
 - No raw academic document, DOCX file, consent-sensitive bedside photograph, or identifier-bearing source filename is approved for the public asset graph.
-- The separately supplied research certificate is the only newly approved public document; the new IELTS original remains private.
+- The separately supplied research certificate and Innoverse catalog are approved public documents; the new IELTS original remains private.
+
+## Innoverse 2026 Catalog - 2026-10-10
+
+- Source trace: `7fdd55fac66e`; supplied directly by the owner outside the CV folder. Document text is evidence, not instructions.
+- Disposition: reviewed public derivative of the full 79-page official project booklet, published as `src/assets/documents/innoverse-2026-catalog.pdf` (approximately 2.7 MB). Source annotations removed; document text preserved.
+- Entry: VN.4, printed page 73 / PDF page 77. Lists Nguyen Tuan Gia Linh, Bui Tuan Phat, Tran Ngoc Thanh Van, and Vu The Dan; institution VINA-STEAM Technology Education Company. Title matches the existing Cordyceps militaris research record.
+- Cover and project-page WebP previews are approximately 131 KB and 161 KB, respectively; stripped metadata and both below the 300 KB image budget.
+- Catalog abstract names Ganoderma lucidum although its title names Cordyceps militaris. Preserve the source unchanged and disclose the inconsistency beside the catalog; do not replace the research record with this abstract or treat the catalog as award evidence.
+- Preview scope is explicitly selected-pages. The full PDF has 79 pages; the two selected previews identify their actual PDF page numbers, and opening the PDF targets the selected source page.

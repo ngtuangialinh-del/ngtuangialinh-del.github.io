@@ -108,7 +108,17 @@ describe("content privacy gate (BR-8)", () => {
     expect(JSON.stringify(editorialIllustrations)).not.toMatch(/AI-generated/i);
 
     for (const document of evidenceDocuments) {
-      expect(document.pages).toHaveLength(document.pageCount);
+      if (document.previewScope === "selected-pages") {
+        expect(document.assetUrl).toBeTruthy();
+        expect(document.pages.length).toBeGreaterThan(0);
+        expect(document.pages.length).toBeLessThan(document.pageCount);
+        for (const page of document.pages) {
+          expect(page.pdfPageNumber).toBeGreaterThanOrEqual(1);
+          expect(page.pdfPageNumber).toBeLessThanOrEqual(document.pageCount);
+        }
+      } else {
+        expect(document.pages).toHaveLength(document.pageCount);
+      }
       for (const page of document.pages) {
         expect(page.imageUrl.startsWith("/documents/pages/")).toBe(true);
         expect(page.imageUrl.includes("assets/CV")).toBe(false);
@@ -134,7 +144,7 @@ describe("content privacy gate (BR-8)", () => {
     }
   });
 
-  it("publishes only the three approved PDFs without active-content markers", () => {
+  it("publishes only the four approved PDFs without active-content markers", () => {
     const files = collectFiles(publicDocumentsDir, [".pdf"]);
     const activeContentPatterns = [
       /\/JavaScript/i,
@@ -146,6 +156,7 @@ describe("content privacy gate (BR-8)", () => {
 
     expect(files.map((file) => file.split("/").at(-1)).sort()).toEqual([
       "hematology-volunteering-acknowledgement.pdf",
+      "innoverse-2026-catalog.pdf",
       "nguyen-tuan-gia-linh-cv.pdf",
       "research-gold-medal-certificate.pdf",
     ]);
@@ -170,7 +181,7 @@ describe("content privacy gate (BR-8)", () => {
       ".svg",
     ]);
 
-    expect(files.length).toBe(15);
+    expect(files.length).toBe(17);
 
     for (const file of files) {
       const bytes = readFileSync(file);

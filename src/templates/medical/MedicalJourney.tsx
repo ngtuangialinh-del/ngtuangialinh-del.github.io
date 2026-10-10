@@ -51,8 +51,8 @@ export function MedicalJourney() {
             objectPosition="center"
           />
           <Text mt={4} color="var(--text-muted)" lineHeight="1.7">
-            A learning path shaped by scientific preparation, collective
-            service, and the beginning of formal medical education.
+            School, research, and volunteering have all been part of my
+            preparation for studying medicine.
           </Text>
         </Box>
         <Box

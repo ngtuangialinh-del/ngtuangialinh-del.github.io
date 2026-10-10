@@ -232,3 +232,29 @@ This is the single source of truth for Code Generation of the one `visual-eviden
 - [x] Remove the Research `Scope and limitation` panel and its unused data/type contract.
 - [x] Remove all visitor-facing clinical-qualification and clinical-credential disclaimer copy from Introduction, Medical Journey, Academics, and Research.
 - [x] Update focused tests and implementation records, then run generation checks.
+
+## Natural Copy and CV Preview - 2026-10-10
+
+Owner-requested revisions during Code Generation review; retains the existing unit and publication decisions.
+
+- [x] Rewrite section introductions, profile, journey, service, and contact copy in a natural student voice without changing facts or team attribution.
+- [x] Remove the CV card from the Evidence Library and retain introduction preview/download actions.
+- [x] Portal the document dialog above section stacking contexts and bound its responsive layout.
+- [x] Render sharper CV pages from the approved PDF, preserve image budgets, and provide zoom for small text.
+- [x] Update focused regressions, run generation checks, and record the review result.
+
+## Fuller Section Summaries - 2026-10-10
+
+- [x] Expand the seven section introductions and profile welcome with enthusiasm, concrete details, and a natural first-person voice.
+- [x] Validate copy formatting and TypeScript, then update review records.
+
+## Half-Length Section Summaries - 2026-10-10
+
+- [x] Shorten all seven section introductions and the profile welcome to approximately half their current length.
+- [x] Check word counts, formatting, and TypeScript; update implementation and state records.
+
+## Innoverse Catalog Integration - 2026-10-10
+
+- [x] Review the catalog, locate the matching project, and verify relevant pages and publication details.
+- [x] Publish the reviewed full catalog PDF with optimized cover/project previews and integrate Research and Evidence Library actions.
+- [x] Update focused tests, run generation checks, and reconcile documentation/state.

@@ -78,3 +78,32 @@ The full clean build, complete test matrix, and measured release report are inte
 - The contact form intentionally publishes no recipient address. It prepares a local email draft without submitting, transmitting, or storing the entered content; the visitor adds a recipient in their email application.
 - Video playback is not included; both supplied MP4 sources remain private.
 - Editorial illustrations are contextual visuals and must not be interpreted as documentary evidence or depictions of actual activities.
+
+## Natural Copy and CV Preview Review - 2026-10-10
+
+- Rewrote section introductions, profile, journey milestones, community activities, contact headline, and evidence explanations in a natural student voice. Scientific measurements, scores, dates, and team attribution remain accurate.
+- Evidence Library now shows seven supporting records. The CV remains available through the introduction preview and download actions.
+- Wrapped the document backdrop and positioner in a Chakra Portal so section isolation cannot place subsequent section text over the preview. Added explicit responsive width, dynamic viewport height, flex containment, and scrollable body.
+- Regenerated both CV pages directly from the approved vector PDF at 200 DPI, with text antialiasing, and stripped metadata. Replaced low-resolution JPEG pages with WebP pages measuring 1654 × 2340 pixels, approximately 285 KB and 88 KB; both meet the existing 300 KB budget. Added a Zoom in / Fit to width toggle with a scrollable page surface.
+- Verified both page controls, zoom, Escape dismissal, focus restoration, PDF actions, missing Evidence Library CV card, and portal placement through focused regressions. Browser checks at 1440, 768, and 390 pixels with 2× pixel density confirmed clear images, no horizontal dialog overflow, and no underlying section overlap. Desktop and phone screenshots were visually inspected.
+- Generation checks: 24 focused tests across six files, production build with TypeScript, ESLint, privacy/media budget checks, and diff whitespace validation pass. The pre-existing Vite large-chunk advisory remains; JavaScript gzip is 202.04 KB.
+- Extension compliance: Security Baseline and Property-Based Testing N/A because both remain disabled by the owner. Existing privacy and publication safeguards pass.
+- Code Generation remains at owner review; formal Build and Test and Operations have not been advanced.
+
+## Fuller Section Summaries - 2026-10-10
+
+Expanded the seven section introductions and profile welcome into connected paragraphs with more enthusiasm and detail. Copy highlights school progress, Cambridge and IELTS qualifications, the team’s Cordyceps research and Gold Medal, specific volunteer activities, gallery browsing, supporting records, and the email-draft flow. Facts and team attribution remain grounded in the existing data. Prettier and TypeScript pass; no new tests were added for this copy-only change. Security and PBT extensions remain disabled (N/A). Existing Code Generation review remains pending.
+
+## Half-Length Section Summaries - 2026-10-10
+
+Shortened all seven section introductions and the profile welcome to roughly half the expanded length. Retained warm first-person language, factual details, and practical browsing/email instructions. Word counts, Prettier, and TypeScript pass. No new tests needed for this copy-only revision; disabled extensions remain N/A.
+
+## Innoverse Catalog Integration - 2026-10-10
+
+- Reviewed the owner-supplied 79-page official booklet and visually matched project VN.4, its Cordyceps militaris title, and all four inventors on printed page 73 (PDF page 77). Source instructions were not executed.
+- Published a reviewed annotation-free full PDF of approximately 2.7 MB and two metadata-free WebP previews (cover: 131 KB; project page: 161 KB). The PDF is a separate download asset.
+- Added the catalog immediately after the research certificate in significance order; retained seven earlier supporting records and kept the CV in the introduction.
+- Added Research preview/download actions; preview opens at the project page. Extended the existing EvidencePage contract with the actual PDF page number and EvidenceDocument with explicit selected-pages scope, so selected previews and full document length remain distinct. PDF opening targets page 77 for the project preview.
+- Preserved the source’s inconsistent abstract (Ganoderma lucidum vs. Cordyceps militaris in its title) and noted the issue beside the catalog. Existing research facts and Gold Medal attribution remain unchanged.
+- Verification: 19 focused tests in four files, TypeScript production build, ESLint, formatting, publication/privacy/media checks, and diff validation pass. Browser checks at 1440 and 390 pixels confirm entry/cover previews, PDF page targeting, full download, and contained layout. Source and published project-page text match.
+- Extensions: Security Baseline and Property-Based Testing N/A because both remain disabled. Code Generation owner review remains pending; no deployment or formal Build and Test stage advancement.

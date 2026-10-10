@@ -1,4 +1,9 @@
-import { screen } from "@testing-library/react";
+import {
+  fireEvent,
+  screen,
+  waitForElementToBeRemoved,
+  within,
+} from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
 import { renderAndCheckA11y } from "../../test/a11y-helpers";
@@ -25,5 +30,29 @@ describe("MedicalResearch", () => {
     expect(screen.queryByText(/AI-generated/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/scope and limitation/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/clinical efficacy/i)).not.toBeInTheDocument();
+  });
+
+  it("opens the catalog directly at VN.4 and offers the full download", async () => {
+    await renderAndCheckA11y(<MedicalResearch />);
+    expect(screen.getByTestId("research-download-catalog")).toHaveAttribute(
+      "download",
+      "innoverse-2026-catalog.pdf",
+    );
+    fireEvent.click(screen.getByTestId("research-preview-catalog"));
+    const dialog = await screen.findByRole("dialog");
+    expect(
+      within(dialog).getByTestId("document-page-position"),
+    ).toHaveTextContent("Preview 2 of 2");
+    expect(
+      within(dialog).getByTestId("document-selected-page"),
+    ).toHaveAttribute("src", "/documents/pages/innoverse-catalog-project.webp");
+    expect(
+      within(dialog).getByTestId("document-open-pdf").getAttribute("href"),
+    ).toMatch(/#page=77$/);
+    expect(
+      within(dialog).getByText(/abstract says Ganoderma lucidum/),
+    ).toBeInTheDocument();
+    fireEvent.click(within(dialog).getByTestId("document-preview-close"));
+    await waitForElementToBeRemoved(() => screen.queryByRole("dialog"));
   });
 });

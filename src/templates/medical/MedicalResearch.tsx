@@ -1,14 +1,32 @@
-import { Box, Flex, Grid, SimpleGrid, Text, VStack } from "@chakra-ui/react";
-import { LuAward, LuBeaker, LuMicroscope } from "react-icons/lu";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  SimpleGrid,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import {
+  LuAward,
+  LuBeaker,
+  LuBookOpen,
+  LuDownload,
+  LuMicroscope,
+} from "react-icons/lu";
 
 import SectionShell from "../../components/shared/SectionShell";
 import EditorialFigure from "../../components/shared/EditorialFigure";
 import { editorialIllustrations } from "../../data/illustrations";
 import { researchProject } from "../../data/research";
 import { sectionCopy } from "../../data/sectionCopy";
+import { researchCatalogDocument } from "../../data/evidence";
+import { DocumentPreviewDialog } from "../../components/ui/document-preview-dialog";
 
 export function MedicalResearch() {
   const copy = sectionCopy.research;
+  const [catalogOpen, setCatalogOpen] = useState(false);
 
   return (
     <SectionShell
@@ -82,6 +100,41 @@ export function MedicalResearch() {
             {researchProject.recognition.attribution} ·{" "}
             {researchProject.recognition.date}
           </Text>
+          <Box mt={5} pt={5} borderTop="1px solid rgba(255,255,255,.2)">
+            <Text color="rgba(255,255,255,.85)" fontSize="sm">
+              Our project is also listed in the official Innoverse 2026 catalog:
+              VN.4, printed page 73 (PDF page 77).
+            </Text>
+            <Flex mt={3} gap={3} flexWrap="wrap">
+              <Button
+                size="sm"
+                variant="outline"
+                color="#fff"
+                borderColor="rgba(255,255,255,.5)"
+                _hover={{ bg: "rgba(255,255,255,.1)" }}
+                onClick={() => setCatalogOpen(true)}
+                data-testid="research-preview-catalog"
+              >
+                <LuBookOpen /> View catalog entry
+              </Button>
+              <Button
+                asChild
+                size="sm"
+                variant="outline"
+                color="#fff"
+                borderColor="rgba(255,255,255,.5)"
+                _hover={{ bg: "rgba(255,255,255,.1)" }}
+              >
+                <a
+                  href={researchCatalogDocument.assetUrl}
+                  download={researchCatalogDocument.downloadName}
+                  data-testid="research-download-catalog"
+                >
+                  <LuDownload /> Download catalog
+                </a>
+              </Button>
+            </Flex>
+          </Box>
         </Box>
         <Box className="reveal-up delay-2">
           <EditorialFigure
@@ -149,6 +202,13 @@ export function MedicalResearch() {
           </SimpleGrid>
         </Box>
       </SimpleGrid>
+      {catalogOpen ? (
+        <DocumentPreviewDialog
+          document={researchCatalogDocument}
+          initialPageIndex={1}
+          onClose={() => setCatalogOpen(false)}
+        />
+      ) : null}
     </SectionShell>
   );
 }

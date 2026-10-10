@@ -204,3 +204,9 @@ The enhancement is successful when:
 - Question 8: Option C accepted; Property-Based Testing extension disabled.
 - Evidence refresh Question 1: Option A accepted; use the official IELTS 7.5 overall result and component scores.
 - Evidence refresh Question 2: Option A accepted; keep the raw IELTS PDF private and publish a verified summary.
+
+## Owner Review Addition - Innoverse Catalog (2026-10-10)
+
+- Add the supplied official 79-page catalog to the Evidence Library after the Gold Medal certificate, with download and selected cover/project previews.
+- In Research, open directly to VN.4 on printed page 73 / PDF page 77 and offer the full catalog download.
+- Distinguish selected preview count from full document page count; retain the original project title and scientific facts despite the catalog’s inconsistent abstract species.

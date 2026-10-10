@@ -1,6 +1,7 @@
 import {
   fireEvent,
   screen,
+  waitFor,
   waitForElementToBeRemoved,
   within,
 } from "@testing-library/react";
@@ -67,15 +68,27 @@ describe("MedicalHero", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("offers CV preview and download actions", async () => {
+  it("reviews every CV page in the popup and restores focus when closed", async () => {
     await renderAndCheckA11y(<MedicalHero />);
+    const trigger = screen.getByTestId("hero-preview-cv");
+    trigger.focus();
+    fireEvent.click(trigger);
 
+    const dialog = await screen.findByRole("dialog");
+    // The dialog must escape the isolated hero stacking context.
+    expect(dialog.closest("#introduction")).toBeNull();
+    expect(
+      within(dialog).getByTestId("document-selected-page"),
+    ).toHaveAttribute("src", "/documents/pages/cv-01.webp");
+    const zoom = within(dialog).getByTestId("document-page-zoom");
+    expect(zoom).toHaveAttribute("aria-pressed", "false");
+    fireEvent.click(zoom);
+    expect(zoom).toHaveAttribute("aria-pressed", "true");
+    fireEvent.click(zoom);
+    expect(zoom).toHaveTextContent("Zoom in");
     expect(
       screen.getByRole("link", { name: "Download curriculum vitae" }),
     ).toHaveAttribute("download", "nguyen-tuan-gia-linh-cv.pdf");
-    fireEvent.click(screen.getByTestId("hero-preview-cv"));
-
-    const dialog = await screen.findByRole("dialog");
     expect(
       within(dialog).getByTestId("document-page-position"),
     ).toHaveTextContent("Page 1 of 2");
@@ -84,7 +97,31 @@ describe("MedicalHero", () => {
         name: "Page 1 of Nguyễn Tuấn Gia Linh's curriculum vitae",
       }),
     ).toBeInTheDocument();
+    expect(within(dialog).getByTestId("document-page-previous")).toBeDisabled();
+    expect(
+      within(dialog).getByTestId("document-page-thumbnail-cv-page-1"),
+    ).toHaveAttribute("aria-pressed", "true");
+
+    fireEvent.click(within(dialog).getByTestId("document-page-next"));
+    expect(
+      within(dialog).getByTestId("document-page-position"),
+    ).toHaveTextContent("Page 2 of 2");
+    expect(
+      within(dialog).getByRole("img", {
+        name: "Page 2 of Nguyễn Tuấn Gia Linh's curriculum vitae",
+      }),
+    ).toBeInTheDocument();
+    expect(within(dialog).getByTestId("document-page-next")).toBeDisabled();
+    expect(
+      within(dialog).getByTestId("document-page-thumbnail-cv-page-2"),
+    ).toHaveAttribute("aria-pressed", "true");
+    expect(within(dialog).getByTestId("document-open-pdf")).toBeInTheDocument();
+    expect(
+      within(dialog).getByTestId("document-download-pdf"),
+    ).toBeInTheDocument();
+
     fireEvent.click(within(dialog).getByTestId("document-preview-close"));
     await waitForElementToBeRemoved(() => screen.queryByRole("dialog"));
+    await waitFor(() => expect(trigger).toHaveFocus());
   });
 });

@@ -1,10 +1,4 @@
-import {
-  fireEvent,
-  screen,
-  waitFor,
-  waitForElementToBeRemoved,
-  within,
-} from "@testing-library/react";
+import { fireEvent, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
 import { evidenceDocuments } from "../../data/evidence";
@@ -18,11 +12,11 @@ describe("MedicalEvidence", () => {
     expect(evidenceDocuments).toHaveLength(8);
     expect(evidenceDocuments.map((document) => document.id)).toEqual([
       "research-gold-medal",
+      "innoverse-catalog",
       "admission-and-graduation",
       "ielts-result",
       "igcse-statement",
       "school-record",
-      "curriculum-vitae",
       "community-project-records",
       "hematology-acknowledgement",
     ]);
@@ -39,56 +33,16 @@ describe("MedicalEvidence", () => {
     expect(screen.getAllByText("Verified summary")).toHaveLength(5);
     expect(screen.getAllByTestId(/^preview-thumbnail-/)).toHaveLength(8);
     expect(
-      screen.getByRole("link", { name: "Download Curriculum Vitae" }),
-    ).toHaveAttribute("download", "nguyen-tuan-gia-linh-cv.pdf");
+      screen.queryByTestId("evidence-curriculum-vitae"),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId("preview-curriculum-vitae"),
+    ).not.toBeInTheDocument();
     expect(
       screen.getByRole("link", {
         name: "Download Research project Gold Medal certificate",
       }),
     ).toHaveAttribute("download", "research-gold-medal-certificate.pdf");
-  });
-
-  it("reviews every CV page in the popup and restores focus when closed", async () => {
-    await renderAndCheckA11y(<MedicalEvidence />);
-    const trigger = screen.getByTestId("preview-curriculum-vitae");
-    trigger.focus();
-    fireEvent.click(trigger);
-
-    const dialog = await screen.findByRole("dialog");
-    expect(
-      within(dialog).getByTestId("document-page-position"),
-    ).toHaveTextContent("Page 1 of 2");
-    expect(
-      within(dialog).getByRole("img", {
-        name: "Page 1 of Nguyễn Tuấn Gia Linh's curriculum vitae",
-      }),
-    ).toBeInTheDocument();
-    expect(within(dialog).getByTestId("document-page-previous")).toBeDisabled();
-    expect(
-      within(dialog).getByTestId("document-page-thumbnail-cv-page-1"),
-    ).toHaveAttribute("aria-pressed", "true");
-
-    fireEvent.click(within(dialog).getByTestId("document-page-next"));
-    expect(
-      within(dialog).getByTestId("document-page-position"),
-    ).toHaveTextContent("Page 2 of 2");
-    expect(
-      within(dialog).getByRole("img", {
-        name: "Page 2 of Nguyễn Tuấn Gia Linh's curriculum vitae",
-      }),
-    ).toBeInTheDocument();
-    expect(within(dialog).getByTestId("document-page-next")).toBeDisabled();
-    expect(
-      within(dialog).getByTestId("document-page-thumbnail-cv-page-2"),
-    ).toHaveAttribute("aria-pressed", "true");
-    expect(within(dialog).getByTestId("document-open-pdf")).toBeInTheDocument();
-    expect(
-      within(dialog).getByTestId("document-download-pdf"),
-    ).toBeInTheDocument();
-
-    fireEvent.click(within(dialog).getByTestId("document-preview-close"));
-    await waitForElementToBeRemoved(() => screen.queryByRole("dialog"));
-    await waitFor(() => expect(trigger).toHaveFocus());
   });
 
   it("opens verified-summary pages without exposing a raw PDF", async () => {
@@ -134,5 +88,29 @@ describe("MedicalEvidence", () => {
       "download",
       "research-gold-medal-certificate.pdf",
     );
+  });
+
+  it("previews the catalog cover and project page while offering all 79 pages", async () => {
+    await renderAndCheckA11y(<MedicalEvidence />);
+    fireEvent.click(screen.getByTestId("preview-innoverse-catalog"));
+    const dialog = await screen.findByRole("dialog");
+    expect(
+      within(dialog).getByText(/Official project booklet · 79 pages/),
+    ).toBeInTheDocument();
+    expect(within(dialog).getByText("Selected pages")).toBeInTheDocument();
+    expect(
+      within(dialog).getByTestId("document-page-position"),
+    ).toHaveTextContent("Preview 1 of 2");
+    fireEvent.click(within(dialog).getByTestId("document-page-next"));
+    expect(
+      within(dialog).getByTestId("document-selected-page"),
+    ).toHaveAttribute("src", "/documents/pages/innoverse-catalog-project.webp");
+    expect(within(dialog).getByTestId("document-download-pdf")).toHaveAttribute(
+      "download",
+      "innoverse-2026-catalog.pdf",
+    );
+    expect(
+      within(dialog).getByTestId("document-open-pdf").getAttribute("href"),
+    ).toMatch(/#page=77$/);
   });
 });

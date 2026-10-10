@@ -32,7 +32,7 @@ describe("MedicalCommunityCare", () => {
     await renderAndCheckA11y(<MedicalCommunityCare />);
 
     expect(screen.getByText(/100 gifts/)).toBeInTheDocument();
-    expect(screen.getByText(/50 children/)).toBeInTheDocument();
+    expect(screen.getByText(/50 preschool children/)).toBeInTheDocument();
     expect(screen.getByText(/165 gifts/)).toBeInTheDocument();
   });
 

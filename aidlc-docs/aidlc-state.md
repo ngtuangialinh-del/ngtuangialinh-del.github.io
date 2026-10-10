@@ -3,12 +3,12 @@
 ## Active Workflow
 
 - **Project**: Brownfield React/Vite static portfolio
-- **Workspace**: `/Users/nhamhhung/student_ports/ngtuangialinh.github.io`
+- **Workspace**: `/Users/nhamhhung/ngtuangialinh.github.io`
 - **Change**: Visual Storytelling and Evidence Library Expansion
 - **Current phase**: CONSTRUCTION
 - **Current stage**: Code Generation - revised implementation awaiting explicit approval
 - **Requirements depth**: Comprehensive - system-wide visual, evidence-publication, privacy, and document-preview changes
-- **Workflow status**: Ordering and disclaimer revisions implemented and verified; awaiting Code Generation approval
+- **Workflow status**: Innoverse catalog integration, concise section copy, and CV preview revisions implemented and verified; awaiting Code Generation approval
 - **Active requirement questions**: `aidlc-docs/inception/requirements/visual-evidence-requirement-verification-questions.md`
 - **Active requirements**: `aidlc-docs/inception/requirements/visual-evidence-requirements.md`
 - **Active execution plan**: `aidlc-docs/inception/plans/execution-plan.md`
@@ -117,3 +117,36 @@
 - Update active artifacts instead of creating duplicate revisions.
 - Keep application code at the workspace root and documentation under `aidlc-docs/`.
 - Keep `audit.md` append-only and complete.
+
+### Natural Copy and CV Preview Review - 2026-10-10
+
+- [x] Workspace/context refreshed; existing reverse-engineering artifacts and implementation reused.
+- [x] Owner request assessed as copy edits and preview bug fixes within the existing approved unit.
+- [x] Student voice updated; supporting records retain factual scores and group attribution.
+- [x] CV removed from Evidence Library; introduction preview and download retained.
+- [x] Dialog portaled above section stacking contexts; responsive bounds and zoom added.
+- [x] CV pages regenerated from approved PDF at 200 DPI as metadata-free WebP, under 300 KB each.
+- [x] Focused generation checks and browser verification completed.
+- [ ] Owner review: Request Changes or Continue to Next Stage (Build and Test).
+
+Extensions: Security Baseline and Property-Based Testing remain disabled (N/A). No new architecture, units, infrastructure, or deployment changes.
+
+### Fuller Section Summaries - 2026-10-10
+
+- [x] Expanded all seven section introductions and the profile welcome with warmer first-person language and existing factual details.
+- [x] Prettier, TypeScript, and diff validation pass for this copy-only revision.
+- [ ] Owner review remains pending using the existing Code Generation review file.
+
+### Half-Length Section Summaries - 2026-10-10
+
+- [x] Shortened seven section introductions and profile welcome to approximately half the previous length, retaining enthusiasm and key details.
+- [x] Word counts, formatting, TypeScript, and diff validation pass.
+- [ ] Existing Code Generation owner review remains pending.
+
+### Innoverse Catalog Integration - 2026-10-10
+
+- [x] Reviewed supplied catalog and verified VN.4 on printed page 73 / PDF page 77.
+- [x] Published full 79-page catalog with selected cover/project previews and Research/Evidence Library actions.
+- [x] Recorded abstract/title species discrepancy without changing source text or research facts.
+- [x] Focused regressions, static/build/publication checks, and desktop/mobile browser checks completed.
+- [ ] Owner Code Generation review remains pending.

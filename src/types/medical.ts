@@ -99,6 +99,7 @@ export type EvidencePage = {
   label: string;
   imageUrl: string;
   alt: string;
+  pdfPageNumber?: number;
 };
 
 export type EvidencePublicationState =
@@ -120,6 +121,7 @@ export type EvidenceDocument = {
   provenance: string;
   redactionNote: string;
   pageCount: number;
+  previewScope?: "selected-pages";
   pages: EvidencePage[];
   downloadPolicy: EvidenceDownloadPolicy;
   assetUrl?: string;

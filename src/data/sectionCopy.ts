@@ -2,45 +2,45 @@ import type { SectionCopyMap } from "../types/medical";
 
 export const sectionCopy = {
   "medical-journey": {
-    eyebrow: "Chronology",
+    eyebrow: "My path",
     title: "Medical Journey",
     intro:
-      "From secondary school through sustained service to a documented medical-program admission — a trajectory built on evidence, not a single moment.",
+      "I’m excited to begin studying medicine at Thai Nguyen University. Here are the school experiences, research, and volunteer projects I’ve been part of at Nguyễn Siêu School as I prepared for this next step.",
   },
   academics: {
     eyebrow: "Academic Record",
     title: "Academics",
     intro:
-      "Cambridge IGCSE, IELTS Academic, and Grade 12 results, each labeled with its scale so the numbers cannot be misread.",
+      "I’m proud of my progress in science, mathematics, and English. My GPA grew from 9.0 to 9.4 during high school, alongside my Cambridge IGCSE, A Level, and IELTS results, which you can explore below.",
   },
   research: {
-    eyebrow: "Scientific Inquiry",
+    eyebrow: "My project",
     title: "Research",
     intro:
-      "A 2026 school research project exploring how formulation can change the dispersibility and measured in-vitro activity of a natural extract.",
+      "I’m excited to share our team’s Cordyceps militaris research, which received an Innoverse Gold Medal in 2026. We explored how nanoformulation improved the extract’s water dispersibility and tested its activity in cancer cell lines.",
   },
   "community-care": {
     eyebrow: "Service",
     title: "Community Care",
     intro:
-      "Three collective initiatives undertaken with classmates — described as group work, not individual accomplishment.",
+      "I’m glad to share the projects I joined with my classmates, from supporting preschool children in Bát Xát to hospital gift-giving and Lunar New Year activities. Here’s what we contributed together to support children and families.",
   },
   gallery: {
-    eyebrow: "Field Record",
+    eyebrow: "In photos",
     title: "Gallery",
     intro:
-      "A curated selection of contextual photographs from the community-care initiatives above.",
+      "Take a look at our volunteer projects, from preparing school supplies to distributing Lunar New Year gifts! Open any photo to browse the moments we shared.",
   },
   evidence: {
-    eyebrow: "Source Record",
+    eyebrow: "Certificates and records",
     title: "Evidence Library",
     intro:
-      "Public-safe source documents and concise summaries of records that contain personal identifiers and therefore remain private.",
+      "Explore our research Gold Medal certificate, my academic and admission records, and documents from our community projects. Open any item to read more; some use summaries to keep personal details private.",
   },
   contact: {
     eyebrow: "Connect",
     title: "Contact",
     intro:
-      "A clear place for academic, research, and community-care enquiries, currently shown with example details.",
+      "Thanks for getting to know me! I’d love to talk about medicine, research, or volunteering. Write a message below, then open it in your email app to review before sending.",
   },
 } satisfies SectionCopyMap;

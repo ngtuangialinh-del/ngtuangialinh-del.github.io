@@ -92,7 +92,7 @@ export function MedicalHero() {
             </HStack>
             <Box>
               <Text className="field-code" color="var(--blue-500)" mb={3}>
-                Medicine begins with curiosity, evidence, and service
+                Getting ready to study medicine
               </Text>
               <Heading
                 id="introduction-heading"
@@ -242,7 +242,7 @@ export function MedicalHero() {
                     Student profile
                   </Text>
                   <Text fontWeight={800} color="var(--text-strong)" mt={1}>
-                    A foundation for medical study
+                    A little about me
                   </Text>
                 </Box>
                 <Flex
@@ -290,12 +290,12 @@ export function MedicalHero() {
                     value: "Beginning formal medical education",
                   },
                   {
-                    label: "School foundation",
+                    label: "My school",
                     value: "Nguyễn Siêu School, Hanoi",
                   },
                   {
                     label: "Preparation",
-                    value: "Sciences, English, and sustained community service",
+                    value: "Science, English, and volunteering",
                   },
                 ].map((item) => (
                   <Flex
