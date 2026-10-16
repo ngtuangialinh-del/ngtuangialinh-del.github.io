@@ -107,3 +107,11 @@ Shortened all seven section introductions and the profile welcome to roughly hal
 - Preserved the source’s inconsistent abstract (Ganoderma lucidum vs. Cordyceps militaris in its title) and noted the issue beside the catalog. Existing research facts and Gold Medal attribution remain unchanged.
 - Verification: 19 focused tests in four files, TypeScript production build, ESLint, formatting, publication/privacy/media checks, and diff validation pass. Browser checks at 1440 and 390 pixels confirm entry/cover previews, PDF page targeting, full download, and contained layout. Source and published project-page text match.
 - Extensions: Security Baseline and Property-Based Testing N/A because both remain disabled. Code Generation owner review remains pending; no deployment or formal Build and Test stage advancement.
+
+## Debrecen and INNOVERSE Video Revision (2026-10-16)
+
+Updated ngtuangialinh hero status to Medical Student at the University of Debrecen, journey milestone/summary and search/social metadata accordingly. Preserved brief prior Thai Nguyen enrollment as history; 27.20 remains explicitly a previous Thai Nguyen admission score. Existing source PDFs and admission-summary illustration remain historical documents. Added INNOVERSE 2026 video iLVkk7hrsHU beneath the Research methods/results, with responsive 16:9 titled lazy-loaded youtube-nocookie iframe, fullscreen and direct YouTube link. Data remains in src/data/research.ts. Adjusted affected copy assertions and disabled axe traversal of third-party frame documents in jsdom while retaining iframe-title checks.
+
+Build and lint pass; existing large-chunk advisory retained. Four browser configurations (390/1440px, light/dark) confirm Debrecen status, research placement, 16:9 dimensions and no horizontal overflow. Screenshot inspected. Third-party playback not manually verified. Full test suite initially returned 52/54; isolated rerun passed all Hero tests but the unchanged MedicalShell Escape-dismissal test still failed. This navigation test issue remains outside the copy/video scope. Record focused rerun separately in audit. git diff --check passes. No deployment. Optional extensions disabled (N/A); existing Code Generation review remains pending.
+
+Focused final rerun: all 20 tests in six Hero/Research/Journey/Academics/metadata/privacy suites pass.

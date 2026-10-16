@@ -26,3 +26,8 @@ export const researchProject = {
     { subjectOrLabel: "A549 reported IC50", value: "119.85 µg/mL" },
   ],
 } satisfies ResearchProject;
+
+export const researchVideo = {
+  title: "INNOVERSE 2026",
+  youtubeId: "iLVkk7hrsHU",
+};

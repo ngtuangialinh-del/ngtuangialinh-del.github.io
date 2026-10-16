@@ -19,7 +19,7 @@ import {
 import SectionShell from "../../components/shared/SectionShell";
 import EditorialFigure from "../../components/shared/EditorialFigure";
 import { editorialIllustrations } from "../../data/illustrations";
-import { researchProject } from "../../data/research";
+import { researchProject, researchVideo } from "../../data/research";
 import { sectionCopy } from "../../data/sectionCopy";
 import { researchCatalogDocument } from "../../data/evidence";
 import { DocumentPreviewDialog } from "../../components/ui/document-preview-dialog";
@@ -202,6 +202,36 @@ export function MedicalResearch() {
           </SimpleGrid>
         </Box>
       </SimpleGrid>
+      <Box
+        as="figure"
+        className="medical-project-video"
+        mt={6}
+        p={{ base: 4, md: 6 }}
+        bg="var(--surface)"
+        border="1px solid var(--border-soft)"
+        borderRadius="lg"
+      >
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${researchVideo.youtubeId}`}
+          title={researchVideo.title}
+          width="960"
+          height="540"
+          loading="lazy"
+          allow="encrypted-media; picture-in-picture; fullscreen"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+        <figcaption>
+          <span>{researchVideo.title}</span>
+          <a
+            href={`https://www.youtube.com/watch?v=${researchVideo.youtubeId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on YouTube <span aria-hidden="true">↗</span>
+          </a>
+        </figcaption>
+      </Box>
       {catalogOpen ? (
         <DocumentPreviewDialog
           document={researchCatalogDocument}

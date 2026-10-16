@@ -282,3 +282,9 @@ The user requested visible PDF previews directly on the website, with each previ
 - [x] Update the plan, summary, state, and append-only audit before presenting the standardized completion decision again.
 
 Implementation begins only after explicit approval of this amendment.
+
+## Owner Revision — Debrecen and INNOVERSE Video (2026-10-16)
+
+- [x] Update current university copy and metadata while preserving historical admission facts.
+- [x] Integrate the supplied INNOVERSE video in Research with responsive playback and direct link.
+- [x] Verify focused tests, build, and responsive layout; update review records.

@@ -10239,3 +10239,51 @@ please integrate this into the project as well"
 **Context**: CONSTRUCTION - Code Generation owner review; disabled extensions N/A; no deployment.
 
 ---
+
+## Medical Light Theme Refresh - Requested
+
+**Timestamp**: 2026-10-10T13:22:16Z
+**User Input**: "for the current project StratusNebulosus, change the light theme color to something more professional, medicine related theme instead. The current color is slightly dull"
+**AI Response**: "Inspected the current portfolio workspace and theme tokens. Will replace warm ivory and muted green light colors with cool white/pale blue surfaces, navy text, and medical teal accents, then verify contrast and responsive presentation."
+**Context**: CONSTRUCTION - Owner-requested revision within existing Code Generation review; existing disabled extensions remain N/A.
+
+---
+
+## Medical Light Theme Refresh - Complete
+
+**Timestamp**: 2026-10-10T13:23:22Z
+**AI Response**: "Updated the light theme with crisp whites, pale blue surfaces, navy headings, and medical teal accents. Coordinated borders, controls, focus rings, shadows, glows, and overlays. Actual semantic text/button token pairs meet WCAG AA; four theme tests, build with TypeScript, lint, and diff validation pass. Desktop and phone screenshots visually inspected with no horizontal overflow. Existing dark theme tokens unchanged; disabled extensions N/A."
+**Context**: CONSTRUCTION - Requested light palette revision complete; existing Code Generation owner review remains pending.
+
+---
+
+## Project Target Correction
+
+**Timestamp**: 2026-10-10T14:40:48Z
+**User Input**: "no, I'm talking about the current project stratusnebulosus"
+**AI Response**: "Located /Users/nhamhhung/StratusNebulosus.github.io. Removed only the uncommitted light-theme changes mistakenly applied to this portfolio, restoring the five affected files to the previously clean HEAD while preserving this append-only audit. Continued work in the intended Stratus project."
+**Context**: Correction of mistaken project target; earlier theme completion entries are superseded.
+
+---
+
+## Debrecen and Video — Owner Revision
+
+**Timestamp**: 2026-10-16T12:32:47Z
+**User Input**: "do the same youtube integration and Medical Student at the University of Debrecen for this project ngtuangialinh"
+**AI Response**: "Target ngtuangialinh.github.io as explicitly requested. Update hero, journey, and metadata to current Debrecen enrollment. Preserve Thai Nguyen admission score as historical. Add supplied INNOVERSE video iLVkk7hrsHU to Research using responsive titled lazy-loaded iframe and direct YouTube link. Verify tests, build, and responsive rendering. Existing Code Generation review revision; disabled extensions N/A."
+
+---
+
+## Debrecen and Video — Verification
+
+**Timestamp**: 2026-10-16T12:34:42Z
+**AI Response**: "Updated ngtuangialinh with current Debrecen status and INNOVERSE video in Research. Build, lint and four responsive browser checks pass. Full suite initially 52/54; isolated Hero passes; unchanged mobile-menu Escape test still fails. No deployment; existing review pending; disabled extensions N/A."
+
+---
+
+## Focused Revision Checks Complete
+
+**Timestamp**: 2026-10-16T12:34:48Z
+**AI Response**: "All 20 focused tests in six affected suites pass. Updated ngtuangialinh local preview: http://127.0.0.1:5173/. The full-suite mobile-menu Escape test failure remains recorded."
+
+---

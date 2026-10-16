@@ -38,7 +38,7 @@ const evidenceStats = [
       .map((entry) => `${entry.subjectOrLabel} ${entry.value}`)
       .join(" · "),
   },
-  { label: "Admission score", value: academics.admissionScore.value },
+  { label: "Previous Thai Nguyen admission score", value: academics.admissionScore.value },
 ];
 
 export function MedicalHero() {
@@ -74,7 +74,7 @@ export function MedicalHero() {
                 borderColor="var(--border-strong)"
                 color="var(--brand-200)"
               >
-                Incoming medical student · 2026
+                Medical student · Debrecen
               </Box>
               <Box
                 as="span"

@@ -14,6 +14,8 @@ export async function renderAndCheckA11y(ui: ReactElement) {
   // jsdom has no canvas implementation, so axe's browser-only color-contrast
   // rule is covered separately by deterministic token-pair tests.
   const results = await axe(view.container, {
+    // Third-party frame documents are outside jsdom; retain iframe-title checks.
+    iframes: false,
     rules: { "color-contrast": { enabled: false } },
   });
 

@@ -19,7 +19,7 @@ describe("MedicalHero", () => {
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        /Incoming medical student, admitted to the Medicine program/,
+        /Medical Student at the University of Debrecen/,
       ),
     ).toBeInTheDocument();
     expect(
@@ -36,7 +36,7 @@ describe("MedicalHero", () => {
     expect(
       screen.getByText("Biology A · Mathematics A · Chemistry B"),
     ).toBeInTheDocument();
-    expect(screen.getByText("Admission score")).toBeInTheDocument();
+    expect(screen.getByText("Previous Thai Nguyen admission score")).toBeInTheDocument();
     expect(screen.getByText("27.20")).toBeInTheDocument();
     expect(screen.queryByText("IGCSE Mathematics")).not.toBeInTheDocument();
     expect(screen.queryByText(/AI-generated/i)).not.toBeInTheDocument();

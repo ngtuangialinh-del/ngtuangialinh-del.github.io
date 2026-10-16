@@ -33,3 +33,29 @@ button, input, textarea { font: inherit; }
 .field-code { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.medical-project-video iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--surface-subtle);
+}
+
+.medical-project-video figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.medical-project-video a {
+  color: var(--brand-200);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

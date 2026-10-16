@@ -34,13 +34,13 @@ describe("MedicalAcademics", () => {
     expect(gpaGroup.getByTestId("score-Grade 12")).toHaveTextContent("9.4");
     expect(aLevelGroup.getByTestId("score-Biology")).toHaveTextContent("A");
     expect(
-      screen.getByTestId("score-Medicine program admission score"),
+      screen.getByTestId("score-Previous Thai Nguyen admission score"),
     ).toHaveTextContent("27.20");
     expect(
-      screen.getByTestId("score-Medicine program admission score"),
+      screen.getByTestId("score-Previous Thai Nguyen admission score"),
     ).toHaveTextContent(/admission notice/i);
     expect(
-      screen.getByTestId("score-Medicine program admission score"),
+      screen.getByTestId("score-Previous Thai Nguyen admission score"),
     ).not.toHaveTextContent("27.20%");
     expect(
       screen.getByTestId("editorial-figure-academics-study-collage"),

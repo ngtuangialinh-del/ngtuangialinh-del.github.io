@@ -64,7 +64,7 @@ export const academics = {
     "Recognized as an Excellent Student in Grade 12",
   ],
   admissionScore: {
-    subjectOrLabel: "Medicine program admission score",
+    subjectOrLabel: "Previous Thai Nguyen admission score",
     value: "27.20",
     scaleNote:
       "University of Medicine and Pharmacy, Thai Nguyen University — 2026 admission notice",
@@ -93,9 +93,9 @@ export const journeyMilestones = [
   },
   {
     id: "admission",
-    label: "Medicine Program Admission",
+    label: "Medicine at the University of Debrecen",
     description:
-      "I was admitted to the Medicine program at the University of Medicine and Pharmacy, Thai Nguyen University, based on my school results.",
+      "After a brief enrollment at Thai Nguyen University, I moved to Hungary to pursue medicine at the University of Debrecen.",
     period: "2026",
   },
 ] satisfies JourneyMilestone[];

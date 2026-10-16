@@ -16,6 +16,12 @@ describe("MedicalResearch", () => {
     expect(
       screen.getByRole("heading", { name: "Research" }),
     ).toBeInTheDocument();
+    expect(screen.getByTitle("INNOVERSE 2026")).toHaveAttribute(
+      "src", "https://www.youtube-nocookie.com/embed/iLVkk7hrsHU",
+    );
+    expect(screen.getByRole("link", { name: /Watch on YouTube/ })).toHaveAttribute(
+      "href", "https://www.youtube.com/watch?v=iLVkk7hrsHU",
+    );
     expect(screen.getByText("325 nm")).toBeInTheDocument();
     expect(screen.getByText("119.85 µg/mL")).toBeInTheDocument();
     expect(screen.getByTestId("research-recognition")).toHaveTextContent(

@@ -5,7 +5,7 @@ export const sectionCopy = {
     eyebrow: "My path",
     title: "Medical Journey",
     intro:
-      "I’m excited to begin studying medicine at Thai Nguyen University. Here are the school experiences, research, and volunteer projects I’ve been part of at Nguyễn Siêu School as I prepared for this next step.",
+      "I’m excited to be studying medicine at the University of Debrecen in Hungary. Here are the school experiences, research, and volunteer projects I’ve been part of at Nguyễn Siêu School as I prepared for this next step.",
   },
   academics: {
     eyebrow: "Academic Record",

@@ -10,12 +10,12 @@ describe("MedicalJourney", () => {
 
     const labels = screen
       .getAllByText(
-        /Nguyễn Siêu School|Strength in Science and English|Sustained Service Activities|Medicine Program Admission/,
+        /Nguyễn Siêu School|Strength in Science and English|Sustained Service Activities|Medicine at the University of Debrecen/,
       )
       .map((node) => node.textContent);
 
     expect(labels[0]).toContain("Nguyễn Siêu School");
-    expect(labels[labels.length - 1]).toContain("Medicine Program Admission");
+    expect(labels[labels.length - 1]).toContain("Medicine at the University of Debrecen");
     expect(
       screen.getByTestId("editorial-figure-medical-journey-pathway"),
     ).toBeInTheDocument();
