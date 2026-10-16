@@ -52,7 +52,7 @@ export const galleryImages = [
     src: "/gallery/cung-em-project-donated-clothing.jpg",
     alt: "Two labeled bags of donated clothing and supplies arranged in a preschool classroom",
     caption:
-      "Prepared clothing and supplies at the preschool, selected as a no-face contextual record.",
+      "Prepared clothing and supplies at the preschool.",
     initiativeId: "cung-em-vung-buoc",
     dateOrPeriod: "2022 – 2025",
   },

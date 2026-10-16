@@ -83,7 +83,7 @@ export const journeyMilestones = [
     id: "strengths",
     label: "Strength in Science and English",
     description:
-      "Mathematics, science, and English were my strongest subjects. I also took Cambridge IGCSE exams and IELTS Academic.",
+      "Mathematics, Science, and English were my strongest subjects. I also took Cambridge IGCSE exams and IELTS Academic.",
   },
   {
     id: "service",

@@ -10287,3 +10287,17 @@ please integrate this into the project as well"
 **AI Response**: "All 20 focused tests in six affected suites pass. Updated ngtuangialinh local preview: http://127.0.0.1:5173/. The full-suite mobile-menu Escape test failure remains recorded."
 
 ---
+
+## Git Remote and Upstream Update
+
+**Timestamp**: 2026-10-16T13:16:55Z
+**User Input**: "help me push upstream:
+
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/ngtuangialinh-del/ngtuangialinh-del.github.io.git
+To https://github.com/ngtuangialinh-del/ngtuangialinh.github.io.git
+   8a8b7de..4a7505c  main -> main"
+**AI Response**: "Updated origin fetch/push URL to https://github.com/ngtuangialinh-del/ngtuangialinh-del.github.io.git and ran git push --set-upstream origin main. Git reports Everything up-to-date; main tracks origin/main at 4a7505c. Existing uncommitted academics.ts/gallery.ts edits preserved and not included in push."
+**Context**: User-authorized Git remote correction and push.
+
+---
